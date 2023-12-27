@@ -1,0 +1,33 @@
+server:
+  port: 8761
+  
+info:
+  app:
+    name: RGB SR
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+---
+info:
+  app:
+    name: yml dev RGB SR
+spring:
+  config:
+    activate:
+      on-profile:
+      - ydev
+---
+info:
+  app:
+    name: yml prod RGB SR
+spring:
+  config:
+    activate:
+      on-profile:
+      - yprod
