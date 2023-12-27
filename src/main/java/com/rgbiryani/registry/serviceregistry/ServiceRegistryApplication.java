@@ -14,7 +14,7 @@ import lombok.extern.slf4j.Slf4j;
 public class ServiceRegistryApplication {
 
 	public static void main(String[] args) {
-		System.out.println("<<<<<< Inside SB main method >>>>>> new");
+		System.out.println("<<<<<< Inside SB main method >>>>>> new 2");
 		SpringApplication.run(ServiceRegistryApplication.class, args);
 	}
 
